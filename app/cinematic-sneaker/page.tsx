@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { HiOutlineChevronDoubleDown } from "react-icons/hi2"; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,7 +50,7 @@ const ShowDisplay: React.FC = () => {
         trigger: containerRef.current,
         start: "top 0%",
         end: "+=400%",
-        scrub: 0.8, // Slightly higher for a smoother, premium feel
+        scrub: 3, // Slightly higher for a smoother, premium feel
         pin: true,
         onUpdate: (self) => setScrollPercent(Math.floor(self.progress * 100)),
       },
@@ -111,7 +112,7 @@ const ShowDisplay: React.FC = () => {
       ".text-3",
       { opacity: 0, y: 300 },
       { opacity: 1, y: 0, duration: 0.3 },
-      0.7,
+      0.6,
     ); //.to(".text-3", { opacity: 0, x: -30, duration: 1 }, 0.95);
 
     return () => {
@@ -121,11 +122,23 @@ const ShowDisplay: React.FC = () => {
 
   return (
     <>
-      <div className="bg-gray-800 flex items-center justify-center h-screen">
-        <p className="text-5xl font-mono text-gray-300 text-center">
-          Cinematic Sneaker Display
-        </p>
-      </div>
+    <div className="relative flex h-screen items-center justify-center bg-gray-800">
+  {/* The Title */}
+  <p className="relative z-10 text-center font-mono text-5xl text-gray-300">
+    Cinematic Sneaker Display
+  </p>
+
+  {/* Bouncy Scroll Icon */}
+  <div className="pointer-events-none absolute bottom-12 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3 text-gray-400">
+    <span className="text-[10px] font-bold uppercase tracking-[0.4em] opacity-60">
+      Scroll down to experience
+    </span>
+    
+    <div className="animate-bounce">
+      <HiOutlineChevronDoubleDown size={32} strokeWidth={1} />
+    </div>
+  </div>
+</div>
 
       <div
         ref={containerRef}
