@@ -163,7 +163,7 @@ const ShowDisplay: React.FC = () => {
               Introduction
             </span>
             <h2 className="max-w-4xl text-6xl font-black tracking-tighter text-black md:text-8xl">
-              The Show <span className="text-gray-300">Begins.</span>
+              The Show <span className="text-orange-400">Begins.</span>
             </h2>
           </div>
 
