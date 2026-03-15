@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { HiOutlineChevronDoubleDown } from "react-icons/hi2"; 
+import { HiOutlineChevronDoubleDown } from "react-icons/hi2";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -122,23 +122,23 @@ const ShowDisplay: React.FC = () => {
 
   return (
     <>
-    <div className="relative flex h-screen items-center justify-center bg-gray-800">
-  {/* The Title */}
-  <p className="relative z-10 text-center font-mono text-5xl text-gray-300">
-    Cinematic Sneaker Display
-  </p>
+      <div className="relative flex h-screen items-center justify-center bg-gray-800">
+        {/* The Title */}
+        <p className="relative z-10 text-center font-mono text-5xl text-gray-300">
+          Cinematic Sneaker Display
+        </p>
 
-  {/* Bouncy Scroll Icon */}
-  <div className="pointer-events-none absolute bottom-12 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3 text-gray-400">
-    <span className="text-[10px] font-bold uppercase tracking-[0.4em] opacity-60">
-      Scroll down to experience
-    </span>
-    
-    <div className="animate-bounce">
-      <HiOutlineChevronDoubleDown size={32} strokeWidth={1} />
-    </div>
-  </div>
-</div>
+        {/* Bouncy Scroll Icon */}
+        <div className="pointer-events-none text-center absolute bottom-12 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3 text-gray-400">
+          <span className="text-[10px] font-bold uppercase tracking-[0.4em] opacity-60">
+            Scroll down to experience
+          </span>
+
+          <div className="animate-bounce">
+            <HiOutlineChevronDoubleDown size={32} strokeWidth={1} />
+          </div>
+        </div>
+      </div>
 
       <div
         ref={containerRef}
@@ -159,7 +159,7 @@ const ShowDisplay: React.FC = () => {
         <div className="text-overlay pointer-events-none absolute inset-0">
           {/* Text 0 */}
           <div className="text-0 absolute opacity-0 inset-0 flex flex-col items-center justify-center text-center px-4">
-            <span className="mb-2 text-sm font-bold uppercase tracking-[0.3em] text-gray-400">
+            <span className="mb-2 text-sm font-bold uppercase tracking-[0.3em] text-orange-400">
               Introduction
             </span>
             <h2 className="max-w-4xl text-6xl font-black tracking-tighter text-black md:text-8xl">
@@ -169,11 +169,11 @@ const ShowDisplay: React.FC = () => {
 
           {/* Text 1 */}
           <div className="text-1 absolute opacity-0 inset-0 flex flex-col items-center justify-center text-center px-4">
-            <span className="mb-2 text-sm font-bold uppercase tracking-[0.3em] text-gray-400">
+            <span className="mb-2 text-sm font-bold uppercase tracking-[0.3em] text-orange-400">
               Innovation
             </span>
             <h2 className="max-w-4xl text-6xl font-black tracking-tighter text-black md:text-8xl">
-              Unmatched <span className="text-gray-400">Design.</span>
+              Unmatched <span className="text-orange-400">Design.</span>
             </h2>
           </div>
 
