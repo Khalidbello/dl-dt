@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Exo_2, Inter } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+// Futuristic/Techno font
+const exo2 = Exo_2({
+  subsets: ["latin"],
+  weight: ["300", "600", "800"],
+  variable: "--font-exo2",
+});
+
+// Clean Geometric font
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 const geistMono = Geist_Mono({
@@ -25,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${exo2.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>
