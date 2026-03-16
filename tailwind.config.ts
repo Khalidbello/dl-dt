@@ -1,5 +1,5 @@
 // tailwind.config.ts
-const config: Config = {
+const config = {
   theme: {
     extend: {
       fontFamily: {
