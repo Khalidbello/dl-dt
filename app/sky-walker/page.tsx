@@ -19,7 +19,7 @@ const Page: React.FC = () => {
   const getImagePath = (index: number) => {
     // Adding 1 because your files likely start at 0001
     const paddedIndex = (index + 1).toString().padStart(4, "0");
-    return `/sky-walker/frames/frame_${paddedIndex}.webp`;
+    return `/sky-walker/output/frame_${paddedIndex}.webp`;
   };
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const Page: React.FC = () => {
     // Set initial rotation (makes the canvas "flat" or edge-on)
     gsap.set(canvasRef.current, {
       rotateZ: 25,
-      width: "50%",
+      scale: "1.5",
       transformOrigin: "center center", // Recommended for predictable rotation
     });
 
@@ -87,30 +87,52 @@ const Page: React.FC = () => {
     const designTl = gsap.timeline({
       scrollTrigger: {
         trigger: "#design-section",
-        start: "top center",
+        start: "top 20%",
         end: "top top",
-        scrub: 3, // Slightly higher for a smoother, premium feel
+        toggleActions: "play none none reverse",
+        // scrub: 1.5, // Slightly higher for a smoother, premium feel
         pin: false,
-        markers: true,
+        //  markers: true,
       },
     });
 
     designTl.to(canvasRef.current, {
       rotateZ: 0,
-      width: "50%",
-      scale: "1.3",
+      scale: "1",
       x: "-50%",
       transformOrigin: "center center", // Recommended for predictable rotation
-      duration: 0.5,
+      duration: 2,
     });
 
-    designTl.to(
+    // animation for design section
+    const expriencTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#experience-section",
+        start: "top 50%",
+        end: "top top",
+        toggleActions: "play none none reverse",
+        // scrub: 1.5, // Slightly higher for a smoother, premium feel
+        pin: false,
+        markers: true,
+      },
+    });
+
+    expriencTl.to(canvasRef.current, {
+      rotateZ: 90,
+      scale: "1.5",
+      x: "0",
+      transformOrigin: "center center", // Recommended for predictable rotation
+      duration: 2,
+    });
+
+    expriencTl.to(
       imageState,
       {
         frame: 100,
         snap: "frame",
         ease: "none",
         onUpdate: render,
+        duration: 2,
       },
       0,
     );
@@ -118,7 +140,7 @@ const Page: React.FC = () => {
 
   return (
     // Changed bg-white to bg-black for that futuristic look
-    <div className="w-full h-screen bg-black text-white relative">
+    <div className="w-full min-h-screen bg-black text-white relative">
       <Navbar />
 
       {/* Container for the Canvas */}
@@ -141,15 +163,15 @@ const Page: React.FC = () => {
         >
           <div className="hero-text-1 absolute top-[30%] left-[5%]">
             <div className="h-0.5 bg-slate-100"></div>
-            <div className=" w-2 h-2 rounded-full absolute top-[-2px] left-0 bg-slate-100"></div>
-            <h1 className="uppercase max-w-[20rem] pl-4">
+            <div className=" w-2 h-2 rounded-full absolute top-[-4px] left-0 bg-slate-100"></div>
+            <h1 className="uppercase max-w-[20rem] mt-4 pl-5">
               Ever wonder what it is like to walk on Air
             </h1>
           </div>
           <div className="hero-text-2 absolute bottom-[10%] right-[5%]">
             <div className="h-0.5 bg-slate-100"></div>
-            <div className="w-2 h-2 rounded-full absolute top-[-2px] right-0 bg-slate-100"></div>
-            <h1 className="uppercase max-w-[20rem] text-right pr-4">
+            <div className="w-2 h-2 rounded-full absolute top-[-4px]  left-0 bg-slate-100"></div>
+            <h1 className="uppercase max-w-[20rem] text-left mt-4 pl-5">
               Skywalker Bragado! Gives you that feeling
             </h1>
           </div>
@@ -165,17 +187,41 @@ const Page: React.FC = () => {
           className="design-section grid grid-cols-4 overflow-hidden relative w-full h-full"
         >
           <div className="col-span-2"></div>
-          <div className="col-start-3 col-span-2 flex flex-col items-start justify-evenly gap-y-6">
+          <div className="col-start-3 col-span-2 flex flex-col items-start justify-center gap-y-20">
             <h3 className="text-6xl">Movement Should feel Natural</h3>
-            <p className="text-3xl">
+            <p className="text-lg">
               SKY WALKER adapts to your stride, absorbing impact and returning
               energy with every step
             </p>
-            <div className="flex items-end justify-evenly w-full text-lg">
-              <div>RUN</div>
-              <div>WALK</div>
-              <div>Drift forward</div>
+            <div className="flex items-end justify-start gap-x-4 w-full text-lg">
+              <div className="mb-2 px-2 border-b border-slate-100">
+                <span>RUN</span>
+              </div>
+              <div className="mb-2 px-2 border-b border-slate-100">
+                <span>RUN</span>
+              </div>
+              <div className="mb-2 px-2 border-b border-slate-100">
+                <span>RUN</span>
+              </div>
             </div>
+          </div>
+        </div>
+
+        {/*  Experienc section */}
+        <div
+          id="experience-section"
+          className="design-section grid grid-cols-4 overflow-hidden relative w-full h-full"
+        >
+          <div className="absolute top-[30%] left-[10%]">
+            <h3 className="border-l border-l-slate-200 py-2 pl-1 text-xl font-bold uppercase">
+              <span>Light on your feet.</span>
+            </h3>
+            <p className="text-xl ml-6">Heavy on innovation.</p>
+          </div>
+
+          <div className="absolute right-[10%] bottom-[10%] text-lg max-w-[10rem]">
+            SKY WALKER transforms everyday movement into something
+            extraordinary.
           </div>
         </div>
       </div>
