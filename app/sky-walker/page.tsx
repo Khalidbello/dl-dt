@@ -240,7 +240,7 @@ const Page: React.FC = () => {
       <Navbar />
 
       {/* Responsive Canvas Container */}
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 bg-red-300">
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 bg-black">
         <canvas
           ref={canvasRef}
           width={700}
@@ -324,7 +324,7 @@ const Page: React.FC = () => {
             </p>
 
             <div
-              className={`flex gap-x-4 w-full ${isMobile ? "justify-center absolute bottom-20 right-2 left-2" : "justify-start"}`}
+              className={`flex gap-x-4 w-full ${isMobile ? "justify-center absolute bottom-5 right-2 left-2" : "justify-start"}`}
             >
               {["RUN", "LEAP", "FLY"].map((tag) => (
                 <div
