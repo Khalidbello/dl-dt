@@ -275,11 +275,11 @@ const Page: React.FC = () => {
           >
             <div
               id="hero-text-2-line"
-              className={`h-0.5 bg-slate-100 w-0 max-w-[20rem] ${isMobile ? "ml-auto" : "ml-auto"}`}
+              className={`h-0.5 bg-slate-100 w-0 max-w-[10rem] ${isMobile ? "ml-auto" : "ml-auto"}`}
             ></div>
             <h1
               id="hero-text-2"
-              className={`opacity-0 uppercase mt-4 font-bold ${isMobile ? "text-2xl" : "text-4xl ml-auto max-w-[20rem]"}`}
+              className={`opacity-0 uppercase mt-4 font-bold ${isMobile ? "text-2xl" : "text-4xl ml-auto max-w-[10rem]"}`}
             >
               Skywalker Bragado! Gives you that feeling
             </h1>
