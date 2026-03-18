@@ -240,7 +240,7 @@ const Page: React.FC = () => {
       <Navbar />
 
       {/* Responsive Canvas Container */}
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 bg-red-300">
         <canvas
           ref={canvasRef}
           width={700}
@@ -249,7 +249,7 @@ const Page: React.FC = () => {
         />
       </div>
 
-      <div className="relative bg-black text-slate-50">
+      <div className="relative text-slate-50">
         {/* Hero Section */}
         <div
           ref={heroRef}
