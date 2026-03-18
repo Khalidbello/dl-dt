@@ -16,9 +16,9 @@ const Page: React.FC = () => {
 
   // Responsive Hooks
   const isMobile = useMediaQuery({ maxWidth: 768 });
-  const isTablet = useMediaQuery({ maxWidth: 1024 });
+  //const isTablet = useMediaQuery({ maxWidth: 1024 });
 
-  const imageCount = 201;
+  const imageCount = 100;
   const images = useRef<HTMLImageElement[]>([]);
   const imageState = { frame: 0 };
 
