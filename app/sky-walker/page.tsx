@@ -236,7 +236,7 @@ const Page: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full text-white relative">
+    <div className="w-full bg-black text-white relative">
       <Navbar />
 
       {/* Responsive Canvas Container */}
@@ -249,7 +249,7 @@ const Page: React.FC = () => {
         />
       </div>
 
-      <div className="relative text-slate-50">
+      <div className="relative bg-black text-slate-50">
         {/* Hero Section */}
         <div
           ref={heroRef}
