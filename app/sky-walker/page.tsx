@@ -256,7 +256,7 @@ const Page: React.FC = () => {
           className=" relative w-full h-screen overflow-hidden"
         >
           <div
-            className={`absolute left-[5%] right-[5%] overflow-hidden ${isMobile ? "top-[15%] text-left" : "top-[30%] text-left"}`}
+            className={`absolute pr-5 left-[5%] right-[5%] overflow-hidden ${isMobile ? "top-[15%] text-left" : "top-[30%] text-left"}`}
           >
             <div
               id="hero-text-1-line"
@@ -271,15 +271,15 @@ const Page: React.FC = () => {
           </div>
 
           <div
-            className={`absolute left-[5%] right-[5%] overflow-hidden ${isMobile ? "bottom-[20%] text-right" : "bottom-[10%] text-right"}`}
+            className={`absolute pl-4 left-[5%] right-[5%] overflow-hidden ${isMobile ? "bottom-[20%] text-right" : "bottom-[10%] text-right"}`}
           >
             <div
               id="hero-text-2-line"
-              className={`h-0.5 bg-slate-100 w-0 max-w-[10rem] ${isMobile ? "ml-auto" : "ml-auto"}`}
+              className={`h-0.5 bg-slate-100 w-0 max-w-[20rem] ${isMobile ? "ml-auto" : "ml-auto"}`}
             ></div>
             <h1
               id="hero-text-2"
-              className={`opacity-0 uppercase mt-4 font-bold ${isMobile ? "text-2xl" : "text-4xl ml-auto max-w-[10rem]"}`}
+              className={`opacity-0 uppercase mt-4 font-bold ${isMobile ? "text-2xl" : "text-4xl ml-auto max-w-[20rem]"}`}
             >
               Skywalker Bragado! Gives you that feeling
             </h1>
@@ -324,7 +324,7 @@ const Page: React.FC = () => {
             </p>
 
             <div
-              className={`flex gap-x-4 w-full ${isMobile ? "justify-center absolute bottom-5 right-2 left-2" : "justify-start"}`}
+              className={`flex gap-x-4 w-full ${isMobile ? "justify-center absolute bottom-12 right-2 left-2" : "justify-start"}`}
             >
               {["RUN", "LEAP", "FLY"].map((tag) => (
                 <div
