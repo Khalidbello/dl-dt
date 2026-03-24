@@ -34,10 +34,13 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* LEFT: Desktop Links */}
         <div className="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light">
-          <a href="#" className="hover:text-gray-400 transition-colors">
+          <a href="" className="hover:text-gray-400 transition-colors">
             Home
           </a>
-          <a href="#" className="hover:text-gray-400 transition-colors">
+          <a
+            href="https://wa.me/08188146243"
+            className="hover:text-gray-400 transition-colors"
+          >
             About
           </a>
         </div>
@@ -51,7 +54,12 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center space-x-6">
           <button className="flex items-center space-x-2 hover:opacity-70 transition-opacity">
             <HiOutlineShoppingBag size={20} />
-            <span className="text-xs uppercase tracking-tighter">Buy Now</span>
+            <a
+              href="https://wa.me/08188146243"
+              className="text-xs uppercase tracking-tighter"
+            >
+              Buy Now
+            </a>
           </button>
         </div>
 
@@ -83,15 +91,20 @@ const Navbar: React.FC = () => {
           <a href="#" onClick={toggleMenu} className="hover:text-gray-500">
             About Us
           </a>
-          <a href="#" onClick={toggleMenu} className="hover:text-gray-500">
+          <a
+            href="https://wa.me/08188146243"
+            onClick={toggleMenu}
+            className="hover:text-gray-500"
+          >
             Contact Us
           </a>
-          <button
+          <a
+            href="https://wa.me/08188146243"
             onClick={toggleMenu}
             className="mt-4 px-8 py-3 border border-white hover:bg-white hover:text-black transition-all text-sm"
           >
             Buy Now
-          </button>
+          </a>
         </div>
       </div>
     </nav>

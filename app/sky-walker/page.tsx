@@ -285,12 +285,14 @@ const Page: React.FC = () => {
             </h1>
           </div>
 
-          <button
+          <a
+            href="https://wa.me/08188146243"
             id="hero-bt"
             className="opcaity-0 px-6 py-3 flex items-center gap-x-3 border border-slate-100 rounded-full absolute bottom-8 left-1/2 -translate-x-1/2 text-sm md:text-lg bg-black/20 backdrop-blur-sm"
           >
+            {" "}
             Get The Feel <HiOutlineShoppingBag size={20} />
-          </button>
+          </a>
         </div>
 
         {/* Design Section */}
