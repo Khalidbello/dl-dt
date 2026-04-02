@@ -3,6 +3,7 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
+        futuristic: ["Orbitron", "sans-serif"],
         exo: ["var(--font-exo2)", "sans-serif"],
         geometric: ["var(--font-inter)", "sans-serif"],
       },
